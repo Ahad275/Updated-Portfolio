@@ -1,15 +1,14 @@
-/* Global Styles */
 .pagebody {
-    background: rgb(4 4 4);
+    background: #fbfbfc;
     margin-bottom: 0;
-    width: 100%; /* Ensure full width */
+    width: 100%; 
 }
 
 .edumain {
     display: flex;
     flex-direction: row;
     padding-top: 20vh;
-    background: rgb(4 4 4 );
+    background: #fbfbfc;
     
 }
 
@@ -34,12 +33,12 @@
 .contenthead h3 {
     font-size: 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FBEAEB;
+    color: #030303;
 }
 
 /* Education */
 .colldegree {
-    background: rgb(4 4 4);
+    background: #fbfbfc;
     width: 100%; /* Ensure full width */
 }
 
@@ -54,7 +53,7 @@
     display: flex;
     align-items: center;
     margin: 1.25rem 0;
-    background: rgb(4 4 4);
+    background: #fbfbfc;
 
 }
 
@@ -85,7 +84,7 @@
     font-style: italic;
     display: flex;
     justify-content: space-between;
-    color: #FBEAEB;
+    color: #060606;
 }
 
 .schlogo, .colllogo {
@@ -131,7 +130,7 @@
     font-family: cursive;
     font-size: 1.25rem;
     text-align: center;
-    color: #f3ecec;
+    color: #060606;
 }
 
 .content-details {
@@ -157,7 +156,7 @@
 }
 
 .content-title {
-    color: #f3ecec;
+    color: #080808;
 }
 
 /* Animation */

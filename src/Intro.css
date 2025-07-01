@@ -1,9 +1,14 @@
 .main {
     display: flex;
     justify-content: space-evenly;
-    height: 90vh;
+    align-items: center;
+    height: 100vh;
     background-color: rgb(4 4 4);
-    
+    background-image: linear-gradient(rgba(255, 255, 255, 0.850), rgba(255, 255, 255, 0.850)), url(./assets/intropagebg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.93;
 }
 /* .main{
     background-image: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0, rgba(22, 22, 22, 0.5) 75%, #161616 100%),url(./assets/bg-masthead.jpg) ;
@@ -11,12 +16,13 @@
 
 
 
-.pagebody {
-    /* background-color: rgba(237, 249, 254, 0); */
+ .pagebody {
+   
     margin-bottom: 0;
-    width: 100%; /* Ensure full width */
+    width: 100%; 
     background: linear-gradient(to bottom, #161616 0, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
-}
+
+} 
 
 
 .intro {
@@ -25,24 +31,45 @@
     padding: 20px;
     background-color: rgba(237, 249, 254, 0);
 }
+.title{
+    color: #2F3C7E;
+    font-size: 2rem;
+}
+.black-text{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
 
 .myname {
     text-align: center;
     color: #2F3C7E;
     font-size: larger;
     font-family: cursive;
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #692d9a,
+    0 0 20px rgb(155, 138, 195),
+    0 0 30px rgb(155, 138, 195),
+    0 0 40px rgb(155, 138, 195),
+    0 0 55px rgb(155, 138, 195),
+    0 0 70px rgb(155, 138, 195)
 }
+
 
 .intro h3 {
     font-size: 3.2em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .description {
+    /* width: 30vw; */
+    margin-left: 45px;
     font-size: 1.3em;
     margin-bottom: 20px;
-    color: #FBEAEB;
+    color: #0b0b0b;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 .imageintro {
@@ -101,7 +128,7 @@
     color: white;
 }
 .gitbut:hover{
-    
+    box-shadow: 0 5px 15px rgba(201, 193, 207, 0.4);
     color: rgb(153, 23, 23);
 }
 .linkedinbut{
@@ -109,7 +136,7 @@
     color: white;
 }
 .linkedinbut:hover{
-  
+    box-shadow: 0 5px 15px rgba(201, 193, 207, 0.4);
     color: rgb(1, 1, 253);
 }
 .emailbut{
@@ -117,6 +144,7 @@
     color: white;
 }
 .emailbut:hover{
+    box-shadow: 0 5px 15px rgba(201, 193, 207, 0.4);
     color: orange;
 }
 .instabut{
@@ -124,6 +152,7 @@
     color: white;
 }
 .instabut:hover{
+    box-shadow: 0 5px 15px rgba(201, 193, 207, 0.4);
     color: palevioletred;
 }
 .twitterbut{
@@ -131,6 +160,7 @@
     color: white;
 }
 .twitterbut:hover{
+    box-shadow: 0 5px 15px rgba(201, 193, 207, 0.4);
     color: black;
 }
 .fbbut{
@@ -138,6 +168,7 @@
     color: white;
 }
 .fbbut:hover{
+    box-shadow: 0 6px 15px rgba(201, 193, 207, 0.4);
     color: skyblue;
 }
 
@@ -159,6 +190,12 @@
 .myname {
     animation: fadeIn 2s ease-in-out;
 }
+.title{
+    animation: fadeIn 2s ease-in-out;
+}
+.black-text{
+    animation: fadeIn 2s ease-in-out;
+}
 
 .description{
     animation: fadeIn 3s ease-in-out;
@@ -171,6 +208,7 @@
 .imageintro{
     animation: fadeIn 4s ease-in-out;
 }
+
 
 /* responsive */
 
@@ -208,10 +246,10 @@
 }
 @media (max-width: 770px) {
     .main {
+        width: 100%;
         flex-direction: column;
         padding-top: 10vh;
-        width: 154vw;
-        height: 100%;
+        height: auto;
     }
 
     .imageintro img {
@@ -246,7 +284,10 @@
     .intro {
         padding-top: 10vh;
         padding-left: 0;
-        font-size: 2rem;
+        font-size: 2.6rem;
+    }
+    .title{
+        font-size: 4.6rem;
     }
 }
 

@@ -1,11 +1,11 @@
-/* Global Styles */
+
 .pagebody {
     margin-bottom: 0;
-    width: 100%; /* Ensure full width */
+    width: 100%;
 }
 
 .promain {
-    background: rgb(4 4 4);
+    background: #fbfbfc;
     display: flex;
     flex-direction: row;
     padding-top: 18vh;
@@ -55,13 +55,13 @@
 }
 
 .cert1 {
-    position: relative; /* Ensure the parent has a relative position */
+    position: relative; 
     border: 0.125rem solid rgb(253, 250, 250);
     width: 25.3vw;
     margin-bottom: 1.25rem;
     border-radius: 1.25rem;
     box-shadow: 0.125rem 0.25rem 1.25rem 0px black;
-    overflow: hidden; /* Ensure the content stays within the parent */
+    overflow: hidden; 
 }
 
 .cert1 img {
@@ -100,7 +100,7 @@
 }
 
 .content-title {
-    color: #f3ecec;
+    color: #060606;
 }
 
 /* Animation */

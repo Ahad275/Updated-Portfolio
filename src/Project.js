@@ -24,10 +24,59 @@ function Project() {
                             My projects utilize a wide array of the latest technology tools. My expertise lies in creating and deploying websites using various technologies.</h3>
                     </div>
                 </div>
-        
+
                 <div className="certhead">
                     {/* <h2>Certifications</h2> */}
                     <div className="certificate">
+                        <div className="cert1">
+                            <a href="https://github.com/Ahad275/Lenscendence" target="_blank" rel="noopener noreferrer">
+                                <img src={currencyconvt} alt="Stanford Course Logo" />
+                                <div className="content-details fadeIn-top">
+                                    <h3 className="content-title">See project</h3>
+                                </div>
+                            </a>
+                            <h4> Lenscedence <br /> A Photography Website </h4>
+                        </div>
+                        <div className="cert1">
+                            <a href="https://github.com/Ahad275/ResumeGenie-A-Resume-Builder-Website" target="_blank" rel="noopener noreferrer">
+                                <img src={scientificcalci} alt="JavaScript Logo" />
+                                <div className="content-details fadeIn-top">
+                                    <h3 className="content-title">See Project</h3>
+                                </div>
+                            </a>
+                            <h4>
+                                ResumeGenie <br /> A Resume Builder Website
+                            </h4>
+                        </div>
+                        <div className="cert1">
+                            <a
+                                href="https://github.com/Ahad275/Virtual-ICU-Visit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img src={textUtils} alt="Node.js Logo" />
+                                <div className="content-details fadeIn-top">
+                                    <h3 className="content-title">See Project</h3>
+                                </div>
+                            </a>
+                            <h4>Virtual Patient Monitoring System for Hospitals</h4>
+                        </div>
+                        <div className="cert1">
+                            <a
+                                href="https://ahad275.github.io/UpdatedPortfolio/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img src={Portfolioproject} alt="Portfolio" />
+                                <div className="content-details fadeIn-top">
+                                    <h3 className="content-title">See Project</h3>
+                                </div>
+                            </a>
+                            <h4>
+                                Portfolio
+                            </h4>
+                        </div>
+                        
                         <div className="cert1">
                             <a
                                 href="https://learn.mongodb.com/c/s8t229yhTYmfc01aURLslw"
@@ -58,54 +107,10 @@ function Project() {
                                 GrocerEase <br /> A Website for Grocery Shop
                             </h4>
                         </div>
-                        <div className="cert1">
-                            <a
-                                href="https://coursera.org/verify/D9KFDDENCP6Z"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img src={Portfolioproject} alt="Portfolio" />
-                                <div className="content-details fadeIn-top">
-                                    <h3 className="content-title">See Project</h3>
-                                </div>
-                            </a>
-                            <h4>
-                                Portfolio
-                            </h4>
-                        </div>
-                        <div className="cert1">
-                            <a
-                                href="https://github.com/Ahad275/textutils"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img src={textUtils} alt="Node.js Logo" />
-                                <div className="content-details fadeIn-top">
-                                    <h3 className="content-title">See Project</h3>
-                                </div>
-                            </a>
-                            <h4>TextUtils <br /> A Text Editor App</h4>
-                        </div>
-                        <div className="cert1">
-                            <a href="https://github.com/Ahad275/Currency-coverter" target="_blank" rel="noopener noreferrer">
-                                <img src={currencyconvt} alt="Stanford Course Logo" />
-                                <div className="content-details fadeIn-top">
-                                    <h3 className="content-title">See project</h3>
-                                </div>
-                            </a>
-                            <h4> Exchango <br /> A Currency Convertor App </h4>
-                        </div>
-                        <div className="cert1">
-                            <a href="https://github.com/Ahad275/scientificCalculator" target="_blank" rel="noopener noreferrer">
-                                <img src={scientificcalci} alt="JavaScript Logo" />
-                                <div className="content-details fadeIn-top">
-                                    <h3 className="content-title">See Project</h3>
-                                </div>
-                            </a>
-                            <h4>
-                                Scientific Calculator
-                            </h4>
-                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>

@@ -15,9 +15,10 @@ function App() {
         <Header />
       
       <Routes>
-      <Route path="/myportfolio" element={<Homepage />} />
+      <Route path="/updatedportfolio" element={<Homepage />} />
       <Route path="/" element={<Homepage />} />
       <Route path="/Homepage" element={<Homepage />} />
+      
         <Route path="/Education" element={<Education />} />
         <Route path="/Project" element={<Project />} />
         <Route path="/Contact" element={<Contact />} />

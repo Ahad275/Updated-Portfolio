@@ -12,9 +12,9 @@ const RootComponent = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 3 seconds
+    }, 2000); 
 
-    return () => clearTimeout(timer); // Clean up the timer
+    return () => clearTimeout(timer); 
   }, []);
 
   return (

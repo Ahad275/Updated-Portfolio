@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Intro.css';
 import imageintro from './assets/imageintro.png'; // Use relative path to import image
 import 'bootstrap/dist/css/bootstrap.css';
@@ -12,12 +12,47 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 library.add(faGithub, faLinkedin, faXTwitter, faFacebook, faInstagram, faEnvelope);
 
 function Intro() {
+    const titles = [
+        'Frontend Developer',
+        'Full Stack Developer',
+        'Software Developer',
+    ];
+
+    const [title, setTitle] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    useEffect(() => {
+        const handleTyping = () => {
+            const fullTitle = titles[currentIndex];
+            setTitle((prev) =>
+                isDeleting ? fullTitle.substring(0, prev.length - 1) : fullTitle.substring(0, prev.length + 1)
+            );
+
+            if (!isDeleting && title === fullTitle) {
+                setTimeout(() => setIsDeleting(true), 1500);
+            } else if (isDeleting && title === '') {
+                setIsDeleting(false);
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
+            }
+
+            setTypingSpeed(isDeleting ? 100 : 150);
+        };
+
+        const typingInterval = setTimeout(handleTyping, typingSpeed);
+
+        return () => clearTimeout(typingInterval);
+    }, [title, isDeleting, currentIndex, typingSpeed]);
+
     return (
         <div className="pagebody">
             <div className="main">
-
                 <div className="intro">
                     <h3 className='myname'>Mohammad Ahad</h3>
+                    <h4 className="title">
+                    <span className="black-text">I'm a</span>  {title}
+                    </h4>
                     <p className="description">
                         A passionate individual who always thrives to work on end-to-end products which develop sustainable and scalable social and technical systems to create impact.
                     </p>
@@ -37,7 +72,6 @@ function Intro() {
                                     </button>
                                 </a>
                             </li>
-                           
                             <li>
                                 <a href="mailto:ahadaa9369@gmail.com">
                                     <button className='emailbut'>
@@ -66,13 +100,8 @@ function Intro() {
                                     </button>
                                 </a>
                             </li>
-
-
                         </ul>
                     </nav>
-                </div>
-                <div className="imageintro">
-                    <img src={imageintro} alt="Intro" />
                 </div>
             </div>
         </div>

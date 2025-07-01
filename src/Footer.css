@@ -1,6 +1,6 @@
 .footmain{
     /* background-color: rgb(237, 249, 254); */
-    background: rgb(4 4 4);
+    background: #fbfbfc;
     color: #2F3C7E;
     height: 35px;
 }
@@ -10,18 +10,3 @@
     /* width: 100%; */
 }
 
-/* @media (max-width: 774px) {
-    .footmain{
-        width: 100vw;
-    }
-    .foot{
-        text-align: center;
-        width: 100vw;
-    }
-    
-} */
-/* @media (max-width: 470px) {
-    .footmain{
-        width: 313vw;
-    }
-} */

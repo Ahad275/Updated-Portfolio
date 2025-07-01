@@ -4,44 +4,35 @@ import whatidomern from './assets/whatidomern.png';
 import whatidosoftware from './assets/whatidosoftware.png';
 
 function Work() {
-
     useEffect(() => {
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top < window.innerHeight &&
-                rect.bottom > 0
-            );
-        }
+        const elements = [
+            { selector: '.whatido', class: 'animate-whatido' },
+            { selector: '.workpost1', class: 'animate-workpost1' },
+            { selector: '.workpost2', class: 'animate-workpost2' },
+            { selector: '.imgwhatido', class: 'animate-imgwhatido' },
+            { selector: '.imgwhatido2', class: 'animate-imgwhatido2' },
+        ];
 
-        function handleScroll() {
-            const whatido = document.querySelector('.whatido');
-            const workpost1 = document.querySelector('.workpost1');
-            const workpost2 = document.querySelector('.workpost2');
-            const imgwhatido = document.querySelector('.imgwhatido');
-            const imgwhatido2 = document.querySelector('.imgwhatido2');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const match = elements.find(el =>
+                            entry.target.classList.contains(el.selector.replace('.', ''))
+                        );
+                        if (match) entry.target.classList.add(match.class);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
 
-            if (isInViewport(whatido)) {
-                whatido.classList.add('animate-whatido');
-            }
-            if (isInViewport(workpost1)) {
-                workpost1.classList.add('animate-workpost1');
-            }
-            if (isInViewport(workpost2)) {
-                workpost2.classList.add('animate-workpost2');
-            }
-            if (isInViewport(imgwhatido)) {
-                imgwhatido.classList.add('animate-imgwhatido');
-            }
-            if (isInViewport(imgwhatido2)) {
-                imgwhatido2.classList.add('animate-imgwhatido2');
-            }
-        }
+        elements.forEach(({ selector }) => {
+            const el = document.querySelector(selector);
+            if (el) observer.observe(el);
+        });
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Trigger the check immediately on component mount
-
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => observer.disconnect();
     }, []);
 
     return (
@@ -51,7 +42,7 @@ function Work() {
 
                 <div className="work1">
                     <div className="imgwhatido">
-                        <img src={whatidomern} alt="What I Do" />
+                        <img src={whatidomern} alt="Full Stack Development" />
                     </div>
                     <div className="workpost1">
                         <h2 className='desg1'>Full Stack Development</h2>
@@ -63,11 +54,11 @@ function Work() {
 
                 <div className="work2">
                     <div className="imgwhatido2">
-                        <img src={whatidosoftware} alt="What I Do" />
+                        <img src={whatidosoftware} alt="Software Development" />
                     </div>
                     <div className="workpost2">
                         <h2 className='desg2'>Software Developer</h2>
-                        <p>⚡ Designed and developed high-performance software applications using C++ Programming Language.</p>
+                        <p>⚡ Designed and developed high-performance software applications using C++.</p>
                         <p>⚡ Implemented clean, efficient, and scalable code adhering to industry best practices.</p>
                         <p>⚡ Conducted thorough code reviews to ensure code quality and maintainability.</p>
                     </div>

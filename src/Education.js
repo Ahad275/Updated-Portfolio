@@ -36,7 +36,7 @@ function Education() {
                                 Lovely Professional University <span className="years">2021 - 2025</span>
                             </h3>
                             <p>
-                                B-Tech in Computer Science & Engineering--CGPA: 7.61
+                                B-Tech in Computer Science & Engineering--CGPA: 7.82
                                 <span className="location">Phagwara, Punjab</span>
                             </p>
                         </div>
